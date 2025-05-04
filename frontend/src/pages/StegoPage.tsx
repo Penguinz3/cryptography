@@ -1,6 +1,6 @@
 import React from 'react'
 import FileInput from '../components/FileInput'
-import { useAudioStego } from '../hooks/useAudioStego'
+import useAudioStego from '../hooks/useAudioStego'
 
 function StegoPage() {
   const { encodeMessage, decodeMessage } = useAudioStego()
