@@ -1,12 +1,6 @@
 import { useState } from 'react'
-import encrypt from 'encrypt-rsa'
-import decrypt from 'encrypt-rsa'
+import { encrypt, decrypt } from 'encrypt-rsa'
 import sodium from 'libsodium-wrappers'
-
-declare module 'libsodium-wrappers' {
-  const sodium: any
-  export default sodium
-}
 
 function CryptoPage() {
   const [message, setMessage] = useState('')
@@ -40,7 +34,7 @@ function CryptoPage() {
         <h3>Encrypt Message</h3>
         <textarea
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setMessage(e.target.value)}
           placeholder="Enter message to encrypt"
         />
         <button onClick={handleEncrypt}>Encrypt</button>
@@ -55,7 +49,7 @@ function CryptoPage() {
         <h3>Decrypt Message</h3>
         <textarea
           value={encrypted}
-          onChange={(e) => setEncrypted(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setEncrypted(e.target.value)}
           placeholder="Enter encrypted message"
         />
         <button onClick={handleDecrypt}>Decrypt</button>

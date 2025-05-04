@@ -16,11 +16,13 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
     "encrypt-rsa": "^1.0.0",
-    "libsodium-wrappers": "^0.7.13"
-  },
-  "devDependencies": {
+    "libsodium-wrappers": "^0.7.13",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@types/node": "^20.11.19",
+    "@types/libsodium-wrappers": "^0.7.13"
+  },
+  "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
