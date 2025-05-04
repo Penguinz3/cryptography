@@ -8,4 +8,4 @@ numpy
 pytest
 pytest-asyncio
 httpx
-pytest-cov 
+pytest-cov
