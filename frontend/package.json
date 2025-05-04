@@ -1,7 +1,7 @@
 {
-  "name": "cryptography-app",
+  "name": "cryptography-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,13 +14,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.0",
-    "libsodium-wrappers": "^0.7.13",
-    "pako": "^2.1.0",
-    "encrypt-rsa": "^1.0.0",
-    "gh-pages": "^6.1.1"
-  },
-  "devDependencies": {
+    "react-router-dom": "^6.22.1",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
@@ -31,6 +25,9 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   },
   "homepage": "https://penguinz3.github.io/cryptography/"
 } 
