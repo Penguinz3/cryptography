@@ -4,4 +4,9 @@ pydantic
 python-multipart
 librosa
 pydub
-numpy 
+numpy
+pydub
+pytest
+pytest-asyncio
+httpx
+pytest-cov 
