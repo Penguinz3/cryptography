@@ -1,6 +1,12 @@
-import React, { useState } from 'react'
-import { encrypt, decrypt } from 'encrypt-rsa'
+import { useState } from 'react'
+import encrypt from 'encrypt-rsa'
+import decrypt from 'encrypt-rsa'
 import sodium from 'libsodium-wrappers'
+
+declare module 'libsodium-wrappers' {
+  const sodium: any
+  export default sodium
+}
 
 function CryptoPage() {
   const [message, setMessage] = useState('')

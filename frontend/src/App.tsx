@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import StegoPage from './pages/StegoPage'

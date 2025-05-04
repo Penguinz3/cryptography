@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 
 const useAudioStego = () => {
   const [stegoAudioURL, setStegoAudioURL] = useState<string | null>(null)
@@ -6,13 +6,9 @@ const useAudioStego = () => {
   const [encodingError, setEncodingError] = useState<string | null>(null)
   const [decodingError, setDecodingError] = useState<string | null>(null)
 
-  const encodeAudio = async (audioFile: File | null, message: string) => {
+  const encodeMessage = async (audioFile: File | null) => {
     if (!audioFile) {
       setEncodingError('Please select an audio file.')
-      return null
-    }
-    if (!message) {
-      setEncodingError('Please enter a message to embed.')
       return null
     }
 
@@ -20,7 +16,6 @@ const useAudioStego = () => {
     try {
       const formData = new FormData()
       formData.append('audio_file', audioFile)
-      formData.append('message', message)
 
       const response = await fetch('/api/audio/encode', {
         method: 'POST',
@@ -42,7 +37,7 @@ const useAudioStego = () => {
     }
   }
 
-  const decodeAudio = async (audioFile: File | null) => {
+  const decodeMessage = async (audioFile: File | null) => {
     if (!audioFile) {
       setDecodingError('Please select an audio file to decode.')
       return null
@@ -78,8 +73,8 @@ const useAudioStego = () => {
     decodedAudioMessage,
     encodingError,
     decodingError,
-    encodeAudio,
-    decodeAudio,
+    encodeMessage,
+    decodeMessage,
   }
 }
 
