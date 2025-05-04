@@ -16,8 +16,9 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # Install Python dependencies
-COPY backend/requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+WORKDIR /workspace/backend
+COPY backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Install frontend dependencies
 WORKDIR /workspace/frontend
@@ -25,4 +26,5 @@ COPY frontend/package*.json ./
 RUN npm install
 
 # Set up workspace
-WORKDIR /workspace 
+WORKDIR /workspace
+COPY . . 
