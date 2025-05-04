@@ -5,8 +5,7 @@ python-multipart
 librosa
 pydub
 numpy
-pydub
 pytest
 pytest-asyncio
 httpx
-pytest-cov 
+pytest-cov
