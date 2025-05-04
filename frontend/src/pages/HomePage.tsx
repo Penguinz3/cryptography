@@ -1,16 +1,15 @@
 import React from 'react'
 
-const HomePage: React.FC = () => {
+function HomePage() {
   return (
-    <div className="home-page">
-      <h2>Welcome to the Steganography & Crypto Web App</h2>
-      <p>This application provides tools for:</p>
+    <div className="section">
+      <h1>Welcome to Cryptography & Steganography</h1>
+      <p>This platform provides tools for secure communication through:</p>
       <ul>
-        <li>Image and Audio Steganography</li>
-        <li>Cryptographic Operations (AES, RSA)</li>
-        <li>Steganalysis Tools</li>
+        <li>Cryptography: Encrypt and decrypt messages using AES and RSA</li>
+        <li>Steganography: Hide messages in images and audio files</li>
+        <li>Steganalysis: Detect hidden messages in files</li>
       </ul>
-      <p>Navigate using the links above to access different features.</p>
     </div>
   )
 }
